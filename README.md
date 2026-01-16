@@ -1,3 +1,4 @@
+
 # 🤖 DocuChat AI
 
 > **A Hybrid RAG (Retrieval-Augmented Generation) Application** that enables secure, cost-effective chat with your PDF documents.
@@ -25,7 +26,7 @@ Unlike standard wrappers, this project utilizes a **Hybrid Architecture** for ma
 -   **Smart Model Routing:** Automatically detects and switches to the best available Google Gemini model (`gemini-flash-latest`) to bypass regional restrictions.
 -   **Persistent Memory:** Your "Brain" (`./chroma_db`) is saved to disk, so you don't have to re-process documents every time you restart.
 -   **Multi-File Ingestion:** Upload and process multiple PDFs simultaneously.
--   **Rate-Limit Protection:** Built-in "Stubborn Retry" logic and batching to prevent API crashes on the Free Tier.
+-   **Rate-Limit Protection:** Optimized logic to prevent API crashes on the Free Tier.
 
 ---
 
@@ -45,3 +46,68 @@ Unlike standard wrappers, this project utilizes a **Hybrid Architecture** for ma
 ```bash
 git clone [https://github.com/YOUR_USERNAME/DocuChat_AI.git](https://github.com/YOUR_USERNAME/DocuChat_AI.git)
 cd DocuChat_AI
+
+```
+
+**2. Create a Virtual Environment**
+
+```bash
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+
+# Mac/Linux
+python3 -m venv .venv
+source .venv/bin/activate
+
+```
+
+**3. Install Dependencies**
+
+```bash
+pip install -r requirements.txt
+
+```
+
+**4. Setup API Keys**
+Create a `.env` file in the root directory and add your key:
+
+```env
+GOOGLE_API_KEY=your_actual_api_key_here
+
+```
+
+---
+
+## 🏃‍♂️ Usage
+
+**1. Run the Application**
+
+```bash
+streamlit run app.py
+
+```
+
+**2. Build the Knowledge Base**
+
+* Open the sidebar on the left.
+* Upload your PDF documents.
+* Click **"Build Brain 🧠"**.
+* *Wait for the "✅ Knowledge Base Built!" message.*
+
+**3. Chat**
+
+* Ask questions like: *"What is the total invoice amount?"* or *"Summarize the limitations in this contract."*
+* The AI will answer based **only** on the documents provided.
+
+---
+
+## 👨‍💻 Author
+
+**Developed by Onkar Yadav**
+
+* Built with Python & LangChain.
+
+```
+
+```
