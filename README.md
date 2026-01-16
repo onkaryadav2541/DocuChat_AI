@@ -25,7 +25,7 @@ Unlike standard wrappers, this project utilizes a **Hybrid Architecture** for ma
 -   **Smart Model Routing:** Automatically detects and switches to the best available Google Gemini model (`gemini-flash-latest`) to bypass regional restrictions.
 -   **Persistent Memory:** Your "Brain" (`./chroma_db`) is saved to disk, so you don't have to re-process documents every time you restart.
 -   **Multi-File Ingestion:** Upload and process multiple PDFs simultaneously.
--   **Rate-Limit Protection:** Optimized logic to prevent API crashes on the Free Tier.
+-   **Rate-Limit Protection:** Built-in "Stubborn Retry" logic and batching to prevent API crashes on the Free Tier.
 
 ---
 
